@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "feeds": [
+    {
+      "slug": "hn-frontpage",
+      "name": "Hacker News - Front Page",
+      "url": "https://hnrss.org/frontpage",
+      "tags": ["hacker-news", "tech"]
+    },
+    {
+      "slug": "github-blog",
+      "name": "GitHub Blog",
+      "url": "https://github.blog/feed/",
+      "tags": ["github", "software"]
+    },
+    {
+      "slug": "simon-willison",
+      "name": "Simon Willison",
+      "url": "https://simonwillison.net/atom/everything/",
+      "tags": ["ai", "software", "research"]
+    },
+    {
+      "slug": "hugging-face-blog",
+      "name": "Hugging Face Blog",
+      "url": "https://huggingface.co/blog/feed.xml",
+      "tags": ["ai", "models", "open-source"]
+    },
+    {
+      "slug": "latent-space",
+      "name": "Latent Space",
+      "url": "https://www.latent.space/feed",
+      "tags": ["ai", "agents", "research"]
+    },
+    {
+      "slug": "openai-news",
+      "name": "OpenAI - News",
+      "url": "https://openai.com/news/rss.xml",
+      "tags": ["openai", "ai"]
+    }
+  ]
+}

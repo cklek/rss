@@ -1,0 +1,65 @@
+export default {
+  app: "rss",
+  commands: [
+    {
+      name: "feeds list",
+      method: "GET",
+      path: "/api/feeds",
+      description: "List directory, subscriptions, and tags.",
+    },
+    {
+      name: "feeds subscribe",
+      method: "POST",
+      path: "/api/feeds",
+      description: "Subscribe with {url, name?, tags?}.",
+      body: "json",
+    },
+    {
+      name: "feeds update",
+      method: "PATCH",
+      path: "/api/feeds/:slug",
+      description: "Update a subscription with {url?, name?, tags?}.",
+      body: "json",
+    },
+    {
+      name: "feeds delete",
+      method: "DELETE",
+      path: "/api/feeds/:slug",
+      description: "Unsubscribe from a custom feed.",
+    },
+    {
+      name: "items list",
+      method: "GET",
+      path: "/api/items",
+      description: "Fetch items; fresh=1 bypasses the cache.",
+      query: ["feed", "url", "q", "limit", "fresh"],
+    },
+    {
+      name: "bookmarks list",
+      method: "GET",
+      path: "/api/bookmarks",
+      description: "List starred items.",
+      query: ["q", "feed", "limit"],
+    },
+    {
+      name: "bookmarks save",
+      method: "POST",
+      path: "/api/bookmarks",
+      description: "Star an item with {item, itemKey}.",
+      body: "json",
+    },
+    {
+      name: "bookmarks delete",
+      method: "DELETE",
+      path: "/api/bookmarks/:id",
+      description: "Unstar by bookmark ID.",
+    },
+    {
+      name: "bookmarks delete-key",
+      method: "DELETE",
+      path: "/api/bookmarks",
+      description: "Unstar by itemKey.",
+      query: ["itemKey"],
+    },
+  ],
+};
